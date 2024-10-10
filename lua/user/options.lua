@@ -26,6 +26,7 @@ lvim.builtin.which_key.mappings["v"] = {
   name = "Visual",
   b = { "<cmd>:set wrap!<cr>", "Toggle text wrap" },
 }
+lvim.format_on_save.enabled = true
 
 vim.api.nvim_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })

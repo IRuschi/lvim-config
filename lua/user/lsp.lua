@@ -13,12 +13,18 @@ lvim.builtin.mason.on_config_done = function()
       "shellcheck",
       "lua_ls",
       "rust_analyzer",
-      "clangd"
+      "clangd",
+      "texlab",
+      "csharp_ls",
+      "azure_pipelines_ls",
     },
   }
 end
 
-
+require("lvim.lsp.manager").setup("angularls")
+require("lvim.lsp.manager").setup("texlab")
+require("lvim.lsp.manager").setup("csharp_ls")
+require("lvim.lsp.manager").setup("azure_pipelines_ls")
 
 -- TODO: overwriting these deletes lvim default config
 require("mason-lspconfig").setup_handlers({

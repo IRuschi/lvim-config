@@ -7,6 +7,7 @@ local plugin_configs = {
   require("user.plugins.goto-preview"),
   require("user.plugins.leap"),
   require("user.plugins.makeit"),
+  require("user.plugins.markdown-preview"),
   require("user.plugins.minimap"),
   require("user.plugins.neo-tree"),
   require("user.plugins.neoscroll"),
@@ -23,6 +24,7 @@ local plugin_configs = {
   require("user.plugins.todo-comments"),
   require("user.plugins.treesitter-context"),
   require("user.plugins.trouble"),
+  require("user.plugins.vimtex"),
   require("user.plugins.window-picker"),
 }
 
