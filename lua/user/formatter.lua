@@ -4,6 +4,6 @@ formatters.setup({
   { name = "beautysh" },
   { name = "cbfmt" },
   { name = "prettier" },
-  { name = "csharpier" },
+  -- { name = "clang-format" },
   -- { name = "google-java-format" }
 })
