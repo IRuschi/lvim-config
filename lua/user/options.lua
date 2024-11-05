@@ -1,6 +1,5 @@
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
-vim.opt.relativenumber = true
 
 -- disable comment jump to next line
 -- https://vimdoc.sourceforge.net/htmldoc/change.html#fo-table
