@@ -1,1 +1,1 @@
-lvim.colorscheme = "tokyonight"
+lvim.colorscheme = "tokyonight-night"
