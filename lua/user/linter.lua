@@ -3,7 +3,10 @@ linters.setup({
   -- { name = "alex" },
   { name = "buf" },
   { name = "buildifier" },
-  { name = "checkstyle" },
+  {
+    name = "checkstyle",
+    args = { "-c", "/google_checks.xml" },
+  },
   -- { name = "clj-kondo" },
   -- { name = "cmakelang" },
   -- { name = "cmakelint" },
