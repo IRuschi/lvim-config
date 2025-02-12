@@ -1,5 +1,5 @@
-vim.opt.shiftwidth = 2
-vim.opt.tabstop = 2
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
 
 -- disable comment jump to next line
 -- https://vimdoc.sourceforge.net/htmldoc/change.html#fo-table
@@ -22,10 +22,9 @@ lvim.builtin.project.manual_mode = true
 lvim.builtin.terminal.active = true
 
 lvim.builtin.which_key.mappings["v"] = {
-  name = "Visual",
-  b = { "<cmd>:set wrap!<cr>", "Toggle text wrap" },
+    name = "Visual",
+    b = { "<cmd>:set wrap!<cr>", "Toggle text wrap" },
 }
-lvim.format_on_save.enabled = true
 
 vim.api.nvim_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
@@ -43,3 +42,9 @@ lvim.builtin.which_key.mappings["m"] = { ":MakeitOpen<CR>", "MakeitOpen" }
 
 -- nvim-tree
 lvim.builtin.nvimtree.setup.view.number = true
+
+-- add syntax highlighting for langs not supported by treesitter
+vim.cmd [[
+  autocmd BufRead,BufNewFile *.puml,*.plantuml set filetype=plantuml
+]]
+
