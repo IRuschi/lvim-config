@@ -29,13 +29,6 @@ return {
           ["."] = true,
         }
       })
-      lvim.builtin.which_key.mappings["a"] = {
-        name = "AI",
-        e = { "<cmd>::Copilot enable<cr>", "Enable Copilot" },
-        d = { "<cmd>::Copilot disable<cr>", "Disable Copilot" },
-        s = { "<cmd>:Copilot status<CR>", "Copilot status" },
-        p = { "<cmd>:Copilot panel<CR>", "Copilot panel" },
-      }
     end,
   },
   -- {
