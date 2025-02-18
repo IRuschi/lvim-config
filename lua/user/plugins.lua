@@ -28,6 +28,7 @@ local plugin_configs = {
   require("user.plugins.trouble"),
   require("user.plugins.vimtex"),
   require("user.plugins.vim-polyglot"),
+  require("user.plugins.vim-surround"),
   require("user.plugins.window-picker"),
 }
 
