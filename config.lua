@@ -1,3 +1,4 @@
+require("user.ensure-installed")
 require("user.colorscheme")
 require("user.dap")
 require("user.fold")

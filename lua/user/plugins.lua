@@ -10,6 +10,7 @@ local plugin_configs = {
   require("user.plugins.leap"),
   require("user.plugins.makeit"),
   require("user.plugins.markdown-preview"),
+  require("user.plugins.mason-tool-installer"),
   require("user.plugins.minimap"),
   require("user.plugins.neo-tree"),
   require("user.plugins.neoscroll"),
