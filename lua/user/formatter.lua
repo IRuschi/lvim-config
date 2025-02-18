@@ -7,3 +7,5 @@ formatters.setup({
   { name = "csharpier", filetypes = { "cs" } },
   -- { name = "google-java-format" }
 })
+
+lvim.format_on_save.enabled = true
