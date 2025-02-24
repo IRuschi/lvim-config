@@ -22,8 +22,8 @@ lvim.builtin.project.manual_mode = true
 lvim.builtin.terminal.active = true
 
 lvim.builtin.which_key.mappings["v"] = {
-    name = "Visual",
-    b = { "<cmd>:set wrap!<cr>", "Toggle text wrap" },
+  name = "Visual",
+  b = { "<cmd>:set wrap!<cr>", "Toggle text wrap" },
 }
 
 vim.api.nvim_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { noremap = true, silent = true })
@@ -40,11 +40,40 @@ lvim.builtin.which_key.mappings["sF"] = { "<cmd>Telescope buffers<CR>", "Find fi
 -- Add keybinding for :MakeitOpen
 lvim.builtin.which_key.mappings["m"] = { ":MakeitOpen<CR>", "MakeitOpen" }
 
--- nvim-tree
-lvim.builtin.nvimtree.setup.view.number = true
+-- nvim-tree file explorer
+local HEIGHT_RATIO = 0.8 -- You can change this
+local WIDTH_RATIO = 0.5  -- You can change this too
+lvim.builtin.nvimtree.setup.
+lvim.builtin.nvimtree.setup.view = {
+  number = true,
+  float = {
+    enable = true,
+    open_win_config = function()
+      local screen_w = vim.opt.columns:get()
+      local screen_h = vim.opt.lines:get() - vim.opt.cmdheight:get()
+      local window_w = screen_w * WIDTH_RATIO
+      local window_h = screen_h * HEIGHT_RATIO
+      local window_w_int = math.floor(window_w)
+      local window_h_int = math.floor(window_h)
+      local center_x = (screen_w - window_w) / 2
+      local center_y = ((vim.opt.lines:get() - window_h) / 2)
+          - vim.opt.cmdheight:get()
+      return {
+        border = "rounded",
+        relative = "editor",
+        row = center_y,
+        col = center_x,
+        width = window_w_int,
+        height = window_h_int,
+      }
+    end,
+  },
+  width = function()
+    return math.floor(vim.opt.columns:get() * WIDTH_RATIO)
+  end,
+}
 
 -- add syntax highlighting for langs not supported by treesitter
 vim.cmd [[
   autocmd BufRead,BufNewFile *.puml,*.plantuml set filetype=plantuml
 ]]
-
